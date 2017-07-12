@@ -73,6 +73,7 @@ app.listen(3000)
 - `key`: session cookie name and store key prefix
 - `store`: session store
 - `cookie`: cookie options, can be an object (static cookie options) or a function that returns an object (dynamic cookie options). Only `maxAge`, `path`, `domain`, `secure`, `httpOnly` are supported as option keys (see option details in [`cookies`](https://github.com/pillarjs/cookies) module).
+- `genid`: custom session id generator, defaults to `uid.sync(24)`.
 
 
 ## Session expiration

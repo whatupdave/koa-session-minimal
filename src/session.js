@@ -49,7 +49,7 @@ module.exports = (options) => {
     let sid = oldSid
 
     const regenerateId = () => {
-      sid = uid.sync(24)
+      sid = opt.genid && opt.genid(ctx) || uid.sync(24)
     }
 
     if (!sid) {
